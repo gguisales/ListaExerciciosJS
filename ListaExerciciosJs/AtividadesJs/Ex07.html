@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+      
+        *{
+              font-family: 'DM Sans', sans-serif;
+              font-family: 'Inter', sans-serif;
+              font-family: 'Poppins', sans-serif;
+              font-family: 'Roboto Mono', monospace;
+              background-color: rgb(51, 51, 51);
+  }
+  
+        #Binicio{
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                border-color: rgb(0, 0, 0);
+                border: solid;
+                border-width:2px;
+                padding: 2px;
+            }
+
+  
+      </style>
+</head>
+<body>
+    <button class="buttonback" onClick="history.go(-1)">Voltar </button>
+    <h1>Divisibilidade:</h1>
+
+    <label for="numero">Digite um número inteiro:</label>
+	<input type="number" id="numero">
+
+	<button onclick="verificarDivisibilidade()">Verificar</button>
+
+	<p id="mensagem"></p>
+
+	<script>
+		function verificarDivisibilidade() {
+			var numero = parseInt(document.getElementById("numero").value);
+			if (numero % 5 === 0) {
+				document.getElementById("mensagem").innerHTML = numero + " é divisível por 5";
+			} else {
+				document.getElementById("mensagem").innerHTML = numero + " não é divisível por 5";
+			}
+		}
+	</script>
+</body>
+</html>

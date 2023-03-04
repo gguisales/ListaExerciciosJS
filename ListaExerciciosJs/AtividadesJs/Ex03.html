@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+      
+        *{
+              font-family: 'DM Sans', sans-serif;
+              font-family: 'Inter', sans-serif;
+              font-family: 'Poppins', sans-serif;
+              font-family: 'Roboto Mono', monospace;
+              background-color: rgb(51, 51, 51);
+  }
+  
+  
+        #Binicio{
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                border-color: rgb(0, 0, 0);
+                border: solid;
+                border-width:2px;
+                padding: 2px;
+            }
+  
+      </style>
+</head>
+<body>
+    <button class="buttonback" onClick="history.go(-1)">Voltar </button>
+
+    <h1>Aumento Salarial</h1>
+
+    <script>
+        let continuar = true;
+  
+        while (continuar) {
+          const salario = Number(prompt("Entre com o salário do funcionário:"));
+          let aumento, novoSalario;
+  
+          if (salario <= 500) {
+            aumento = 0.1;
+          } else {
+            aumento = 0.08;
+          }
+  
+          novoSalario = salario * (1 + aumento);
+          alert(`O novo salário é R$ ${novoSalario.toFixed(2)}.`);
+  
+          continuar = confirm("Deseja calcular o aumento para outro funcionário?");
+        }
+  
+        alert("Obrigado por utilizar nosso programa.");
+      </script>
+</body>
+</html>

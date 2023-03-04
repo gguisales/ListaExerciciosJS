@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+      
+        *{
+              font-family: 'DM Sans', sans-serif;
+              font-family: 'Inter', sans-serif;
+              font-family: 'Poppins', sans-serif;
+              font-family: 'Roboto Mono', monospace;
+              background-color: rgb(51, 51, 51);
+  }
+  
+        #Binicio{
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                border-color: rgb(0, 0, 0);
+                border: solid;
+                border-width:2px;
+                padding: 2px;
+            }
+
+  
+      </style>
+</head>
+<body>
+    
+    <button class="buttonback" onClick="history.go(-1)">Voltar </button>
+
+    <h1>Validação de sexo</h1>
+    <label for="sexo">Digite o sexo (M ou F):</label>
+	<input type="text" id="sexo">
+	<button onclick="validaSexo()">Validar</button>
+
+	<p id="resultado"></p>
+
+	<script>
+		function validaSexo() {
+			var sexo = document.getElementById("sexo").value.toLowerCase();
+
+			if (sexo == 'm' || sexo == 'f') {
+				document.getElementById("resultado").innerHTML = "O sexo é válido";
+			} else {
+				document.getElementById("resultado").innerHTML = "O sexo não é válido";
+			}
+		}
+	</script>
+</body>
+</html>

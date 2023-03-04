@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+      
+        *{
+              font-family: 'DM Sans', sans-serif;
+              font-family: 'Inter', sans-serif;
+              font-family: 'Poppins', sans-serif;
+              font-family: 'Roboto Mono', monospace;
+              background-color: rgb(51, 51, 51);
+  }
+  
+        #Binicio{
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                border-color: rgb(0, 0, 0);
+                border: solid;
+                border-width:2px;
+                padding: 2px;
+      }
+
+  
+      </style>
+</head>
+<body>
+    <button class="buttonback" onClick="history.go(-1)">Voltar </button>
+
+    <h1>Qual é maior?</h1>
+    
+	<script>
+		var numero1 = prompt("Digite o primeiro número:");
+		var numero2 = prompt("Digite o segundo número:");
+
+		if (numero1 > numero2) {
+			alert("O primeiro número (" + numero1 + ") é maior que o segundo número (" + numero2 + ").");
+		} else if (numero1 < numero2) {
+			alert("O segundo número (" + numero2 + ") é maior que o primeiro número (" + numero1 + ").");
+		} else {
+			alert("Os números digitados são iguais.");
+		}
+	</script>
+
+    
+</body>
+</html>

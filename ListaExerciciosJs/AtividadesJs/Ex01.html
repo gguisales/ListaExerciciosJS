@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Imprimindo números pares</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      
+      *{
+            font-family: 'DM Sans', sans-serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto Mono', monospace;
+            background-color: rgb(51, 51, 51);
+}
+
+
+      #numeros-pares {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .numero-par {
+        width: calc(10% - 5px);
+        margin: 2.5px;
+        text-align: center;
+      }
+      #Binicio{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        border-color: rgb(0, 0, 0);
+        border: solid;
+        border-width:2px;
+        padding: 2px;
+      }
+
+    </style>
+    
+  </head>
+  <body>
+    <button class="buttonback" onClick="history.go(-1)">Voltar </button>
+
+    <h1>Números pares até 100:</h1>
+    <div id="numeros-pares"></div>
+
+    <script>
+      const div = document.getElementById("numeros-pares");
+      for (let i = 0; i <= 100; i += 2) {
+        const numeroPar = document.createElement("div");
+        numeroPar.classList.add("numero-par");
+        numeroPar.textContent = i;
+        div.appendChild(numeroPar);
+      }
+    </script>
+  </body>
+</html>

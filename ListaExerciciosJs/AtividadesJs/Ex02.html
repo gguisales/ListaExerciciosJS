@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fatorial</title>
+    <style>
+      
+        *{
+              font-family: 'DM Sans', sans-serif;
+              font-family: 'Inter', sans-serif;
+              font-family: 'Poppins', sans-serif;
+              font-family: 'Roboto Mono', monospace;
+              background-color: rgb(51, 51, 51);
+  }
+        #Binicio{
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                border-color: rgb(0, 0, 0);
+                border: solid;
+                border-width:2px;
+                padding: 2px;
+            }
+
+      </style>
+</head>
+<body>
+    <button class="buttonback" onClick="history.go(-1)">Voltar </button>
+
+    <h1>Cálculo do Fatorial</h1>
+    <form>
+      <label for="numero">Entre com um número inteiro:</label>
+      <input type="number" id="numero" name="numero" min="0">
+      <button type="button" onclick="calcularFatorial()">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+      function calcularFatorial() {
+        const numero = document.getElementById("numero").value;
+        let fatorial = 1;
+        for (let i = 2; i <= numero; i++) {
+          fatorial *= i;
+        }
+        document.getElementById("resultado").textContent = `O fatorial de ${numero} é ${fatorial}.`;
+      }
+    </script>
+    
+</body>
+</html>

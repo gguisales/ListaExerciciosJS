@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+      
+        *{
+              font-family: 'DM Sans', sans-serif;
+              font-family: 'Inter', sans-serif;
+              font-family: 'Poppins', sans-serif;
+              font-family: 'Roboto Mono', monospace;
+              background-color: rgb(51, 51, 51);
+  }
+  
+        #Binicio{
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                border-color: rgb(165, 70, 189);
+                border: solid;
+                border-width:2px;
+                padding: 2px;
+            }
+
+  
+      </style>
+</head>
+<body>
+    <button class="buttonback" onClick="history.go(-1)">Voltar </button>
+
+    <body>
+        <h1>Faixa de Numeros:</h1>
+        <label for="numero">Digite um número:</label>
+        <input type="number" id="numero">
+    
+        <button onclick="verificarNumero()">Verificar</button>
+    
+        <p id="mensagem"></p>
+    
+        <script>
+            function verificarNumero() {
+                var numero = document.getElementById("numero").value;
+                if (numero >= 20 && numero <= 90) {
+                    document.getElementById("mensagem").innerHTML = "O número está na faixa de 20 a 90";
+                } else {
+                    document.getElementById("mensagem").innerHTML = "O número está fora da faixa de 20 a 90";
+                }
+            }
+        </script>
+</body>
+</html>

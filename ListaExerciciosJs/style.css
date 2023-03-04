@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@600&family=Poppins:wght@400;500;700&family=Roboto+Mono:ital,wght@1,600&display=swap');
+
+*{
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    background-color: rgb(26, 26, 26);
+}
+#Binicio{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    border: solid;
+    border-width:2px;
+    padding: 2px;
+  }

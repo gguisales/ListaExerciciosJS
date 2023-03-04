@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+      
+        *{
+              font-family: 'DM Sans', sans-serif;
+              font-family: 'Inter', sans-serif;
+              font-family: 'Poppins', sans-serif;
+              font-family: 'Roboto Mono', monospace;
+              background-color: rgb(51, 51, 51);
+  }
+  
+        #Binicio{
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                border-color: rgb(0, 0, 0);
+                border: solid;
+                border-width:2px;
+                padding: 2px;
+            }
+
+  
+      </style>
+</head>
+<body>
+    <button class="buttonback" onClick="history.go(-1)">Voltar </button>
+    <h1>Quadrado e Somatoria de valores</h1>
+    
+	<label for="valor1">Digite o valor 1:</label>
+	<input type="number" id="valor1">
+    <br>
+	<label for="valor2">Digite o valor 2:</label>
+	<input type="number" id="valor2">
+    <br>
+
+	<label for="valor3">Digite o valor 3:</label>
+	<input type="number" id="valor3">
+    <br>
+
+	<label for="valor4">Digite o valor 4:</label>
+	<input type="number" id="valor4">
+    <br>
+
+	<label for="valor5">Digite o valor 5:</label>
+	<input type="number" id="valor5">
+    <br>
+
+	<button onclick="imprimirQuadrados()">Calcular</button>
+
+	<p id="quadrados"></p>
+	<p id="somatorio"></p>
+
+	<script>
+		function imprimirQuadrados() {
+			var valor1 = parseFloat(document.getElementById("valor1").value);
+			var valor2 = parseFloat(document.getElementById("valor2").value);
+			var valor3 = parseFloat(document.getElementById("valor3").value);
+			var valor4 = parseFloat(document.getElementById("valor4").value);
+			var valor5 = parseFloat(document.getElementById("valor5").value);
+
+			var quadrado1 = valor1 * valor1;
+			var quadrado2 = valor2 * valor2;
+			var quadrado3 = valor3 * valor3;
+			var quadrado4 = valor4 * valor4;
+			var quadrado5 = valor5 * valor5;
+
+			var somatorio = quadrado1 + quadrado2 + quadrado3 + quadrado4 + quadrado5;
+
+			document.getElementById("quadrados").innerHTML = "O quadrado de " + valor1 + " é " + quadrado1 + ", o quadrado de " + valor2 + " é " + quadrado2 + ", o quadrado de " + valor3 + " é " + quadrado3 + ", o quadrado de " + valor4 + " é " + quadrado4 + " e o quadrado de " + valor5 + " é " + quadrado5 + ".";
+			document.getElementById("somatorio").innerHTML = "O somatório dos quadrados é " + somatorio + ".";
+		}
+	</script>
+
+
+</body>
+</html>
